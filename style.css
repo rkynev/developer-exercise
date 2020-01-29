@@ -41,7 +41,6 @@
           li {
             display:flex;
             flex-direction: column;
-            margin-bottom: 20px;
             align-items:left;
             padding: 0px 10px 10px 10px ;
             margin: 10px 10px;
@@ -63,10 +62,49 @@
             p{
               margin: 4px 0 0 20px;
             }
-            @media only screen and (max-width: 340px){
-              li{
-                padding-left: 20px;
-                padding-right: 20px;
-              }
+
+            button{
+            font-family: 'Playfair Display', serif;
+            width: 45%;
+            text-transform: uppercase;
+            padding: 2% 2%;
+            margin: 0 25%;
+            cursor: pointer;
+            color: black;
+            background: none;
+            border: 1px solid black;
+            cursor: pointer;
+            outline: inherit;
+            font-size: 12px;
+            
             }
+
+    @media only screen and (max-width: 414px){
+    
+      body{
+        margin: 0;
+        padding: 0;
+      }
+
+      li{
+        align-items:center;
+      }
+
+      img{
+        width: 320px;
+      }
+      span, p{
+        margin-left: 0;
+      }
+      
+    }
+
+    @media only screen and (max-width: 340px){
+      img{
+        width: 290px;
+      }
+      span, p{
+        margin-left: 0;
+      }
+    }
         

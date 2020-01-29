@@ -15,9 +15,11 @@ fetch('https://api.myjson.com/bins/evnom')
                                 img = createElements('img'),
                                 span = createElements('span');
                                 newSpan = createElements('p');
+                                button = createElements('button')
                             img.src = dress.image.link;
                             span.innerHTML = `${dress.product_name}`;
                             newSpan.innerHTML = `£${dress.price}.00`;
+                            button.innerHTML = 'add to bag';
             
             function appendEl(parent, element) {
                 return parent.appendChild(element);
@@ -25,6 +27,7 @@ fetch('https://api.myjson.com/bins/evnom')
             appendEl(li, img);
             appendEl(li, span);
             appendEl(li, newSpan);
+            appendEl(li, button);
             appendEl( ul, li);
             
 
