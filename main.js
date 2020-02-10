@@ -1,5 +1,7 @@
-//Bag to be made mobile friendly
-//To add display logic for bag
+// WORK IN PROGRESS 
+//TO ADD DISPLAY LOGIC TO BAG
+//BAG AND HDR TO BE MADE MOBILE FRIENDLY 
+//TO ADD DISPLAY NONE WHEN BAG IS EMPTY 
 
 let loading;
 function spinner() {
@@ -53,7 +55,7 @@ fetch("https://api.myjson.com/bins/evnom")
     Array.from(buttons).forEach(element => {
       element.addEventListener("click", addToBag);
     });
-    console.log(buttons);
+    
     function addToBag(event) {
       let productId = event.target.getAttribute("data-id");
       for (let i = 0; i < finalData.length; i++) {
@@ -87,7 +89,7 @@ fetch("https://api.myjson.com/bins/evnom")
           appendEl(div, button);
           appendEl(bag, div);
 
-          console.log(dress.image.link);
+          
         }
       }
 
