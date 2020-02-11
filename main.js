@@ -1,8 +1,9 @@
-// WORK IN PROGRESS 
-//TO ADD DISPLAY LOGIC TO BAG
-//BAG AND HDR TO BE MADE MOBILE FRIENDLY 
-//TO ADD DISPLAY NONE WHEN BAG IS EMPTY
-//TO ADD TOTAL TO BAG 
+//TO ADD DISPLAY LOGIC TO BAG - work in progress
+//BAG AND HDR TO BE MADE MOBILE FRIENDLY - work in progress
+//TO ADD DISPLAY NONE WHEN BAG IS EMPTY - work in progress
+//TO ADD TOTAL TO BAG - work in progress
+//Bag Counter - done
+//Remove Button - done 
 
 let loading;
 function spinner() {
@@ -56,12 +57,11 @@ fetch("https://api.myjson.com/bins/evnom")
     Array.from(buttons).forEach(element => {
       element.addEventListener("click", addToBag);
     });
-    
+
     function addToBag(event) {
       let productId = event.target.getAttribute("data-id");
       for (let i = 0; i < finalData.length; i++) {
         const dress = finalData[i];
-
         if (productId == dress.product_id) {
           let div = createElements("div"),
             img = createElements("img"),
@@ -89,13 +89,38 @@ fetch("https://api.myjson.com/bins/evnom")
           appendEl(div, input);
           appendEl(div, button);
           appendEl(bag, div);
-
-          
+          uptdateBagIconTotal();
+          totalSameItems();
         }
       }
 
-      let list = document.getElementsByClassName("bag-product");
-      document.getElementById("total-count").innerText = list.length;
+      let bagItems = document.getElementsByClassName("bag-product");
+      Array.from(bagItems).forEach(element => {
+        element.addEventListener("change", totalSameItems);
+      });
+
+      function totalSameItems(event) {
+        //to add logick 
+        console.log('works')
+      }
+
+
+      let removeBagItemButton = document.getElementsByClassName(
+        "danger-button"
+      );
+      for (let i = 0; i < removeBagItemButton.length; i++) {
+        let button = removeBagItemButton[i];
+        button.addEventListener("click", removeBagItem);
+      }
+      function removeBagItem(event) {
+        let buttonClicked = event.target;
+        buttonClicked.parentElement.remove();
+        uptdateBagIconTotal();
+      }
+      function uptdateBagIconTotal() {
+        let list = document.getElementsByClassName("bag-product");
+        document.getElementById("total-count").innerText = list.length;
+      }
     }
   })
   .catch(error => console.log(JSON.stringify(error)));
