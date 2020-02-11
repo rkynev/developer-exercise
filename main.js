@@ -116,6 +116,7 @@ fetch("https://api.myjson.com/bins/evnom")
         let buttonClicked = event.target;
         buttonClicked.parentElement.remove();
         uptdateBagIconTotal();
+        
       }
       function uptdateBagIconTotal() {
         let list = document.getElementsByClassName("bag-product");
