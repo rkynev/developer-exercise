@@ -191,6 +191,23 @@ input {
   width: 40%;
 }
 
+.modal-footer {
+  display: flex;
+}
+
+.total-anount {
+  padding: 17px;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+}
+
+.buy {
+  margin-right: 6%;
+}
+.inner-total{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Spinner */
 #loader {
   position: absolute;
