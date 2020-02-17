@@ -103,12 +103,18 @@ fetch("https://api.myjson.com/bins/evnom")
         }
       }
 
-      let quantityInputs = document.getElementsByClassName(
-        "bag-quantity-input"
-      );
+      let quantityInputs = document.getElementsByClassName("bag-quantity-input");
       Array.from(quantityInputs).forEach(element => {
-        element.addEventListener("change", totalItems);
+        element.addEventListener("change", quantityChanged);
       });
+
+      function quantityChanged(event) {
+        let input = event.target;
+        if (isNaN(input.value) || input.value <= 0) {
+          input.value = 1;
+        }
+        totalItems();
+      }
 
       function totalItems() {
         let bagItem = document.getElementsByClassName("bag-product");
@@ -117,14 +123,12 @@ fetch("https://api.myjson.com/bins/evnom")
           price: parseFloat(element.children[2].innerText.replace("£", "")),
           qty: parseFloat(element.children[3].value)
         }));
-        let total = dataBag.map(img => img.price * img.qty);
+        let total = dataBag.map(el => el.price * el.qty);
         let grandTotal = total.reduce((a, b) => a + b);
         document.querySelector(".inner-total").innerText = `£${grandTotal}.00`;
       }
 
-      let removeBagItemButton = document.getElementsByClassName(
-        "danger-button"
-      );
+      let removeBagItemButton = document.getElementsByClassName("danger-button");
       for (let i = 0; i < removeBagItemButton.length; i++) {
         let button = removeBagItemButton[i];
         button.addEventListener("click", removeBagItem);
