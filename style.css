@@ -240,6 +240,24 @@ input {
     padding: 0;
   }
 
+   .bag-img{
+    display: none;
+  }
+
+  .danger-button{
+    width: 15%;
+    font-size: 9px;
+  }
+
+  .buy{
+    font-size: 10px;
+    width: 75px;
+  }
+
+  .bag-product-name{
+    font-size: 10px;
+  }
+
   li {
     align-items: center;
   }
@@ -262,6 +280,13 @@ input {
     font-size: 22px;
     right: 3%;
   }
+  .modal-open{
+    font-size: 12px;
+  }
+
+  #loader{
+    left:58%;
+  }
 }
 
 @media only screen and (max-width: 340px) {
@@ -283,6 +308,22 @@ input {
     font-size: 20px;
     right: 3%;
   }
-  
+  .danger-button{
+    width: 18%;
+    font-size: 9px;
+  }
+
+  .buy{
+    font-size: 10px;
+    width: 65px;
+  }
+
+  .bag-product-name{
+    font-size: 10px;
+  }
+
+  .modal-open{
+    font-size: 10px;
+  }
 
 }

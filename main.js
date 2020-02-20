@@ -1,10 +1,3 @@
-//TO ADD DISPLAY LOGIC TO BAG - done
-//BAG AND HDR TO BE MADE MOBILE FRIENDLY - work in progress
-//TO ADD DISPLAY NONE WHEN BAG IS EMPTY - work in progress
-//TO ADD TOTAL TO BAG - done
-//Bag Counter - done
-//Remove Button - done
-
 let loading;
 function spinner() {
   loading = setTimeout(showPage, 1500);
