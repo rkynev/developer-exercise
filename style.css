@@ -287,6 +287,16 @@ input {
   #loader{
     left:58%;
   }
+
+  .item-name {
+    width: 46%;
+  }
+  .item-price {
+    width: 18%;
+  }
+  .item-qty {
+    width: 36%;
+  }
 }
 
 @media only screen and (max-width: 340px) {
@@ -324,6 +334,16 @@ input {
 
   .modal-open{
     font-size: 10px;
+  }
+
+  .item-name {
+    width: 44%;
+  }
+  .item-price {
+    width: 20%;
+  }
+  .item-qty {
+    width: 36%;
   }
 
 }
