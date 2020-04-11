@@ -19,7 +19,7 @@ function appendEl(parent, element) {
   return parent.appendChild(element);
 }
 
-fetch("https://api.myjson.com/bins/evnom")
+fetch("https://api.jsonbin.io/b/5e918ee7cc62be4369c2b3e6")
   .then(resp => resp.json())
   .then(data => {
     let finalData = data.hits.filter(img => img.image);
