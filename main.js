@@ -23,6 +23,7 @@ fetch("https://api.jsonbin.io/b/5e918ee7cc62be4369c2b3e6")
   .then(resp => resp.json())
   .then(data => {
     let finalData = data.hits.filter(img => img.image);
+    
 
     finalData.map(dress => {
       let li = createElements("li"),
