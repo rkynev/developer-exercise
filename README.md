@@ -1,6 +1,6 @@
-# developer-exercise
+# developer-exercise - Storage SERVER down!!!
 
-Storage SERVER down!!! Work in progress for creating new API.
+Work in progress for creating new API.
 
 Please visit the link to see the site 
 
